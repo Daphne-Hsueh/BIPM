@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Daphne Journey</title>
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
+
+
 <div class="container">
-    <h2> ‧₊˚✈︎ 🇹🇼 ⋆🍍⊹🧋 Daphne Hanyun Hsueh ⟡ 👩🏻‍🍳⋆🗺️‧🏃🏻‍♀️‍➡️ ₊˚‧</h2>
+    <h2 id="galleryBtn">‧₊˚✈︎ 🇹🇼 ⋆🍍⊹🧋 Daphne Hanyun Hsueh ⟡ 👩🏻‍🍳⋆🗺️‧🏃🏻‍♀️‍➡️ ₊˚</h2>
     <table>
         <tr>
             <th>Period</th>
@@ -24,19 +27,19 @@
         <tr>
             <td>2022 - 2023</td>
             <td>✈️ Exchange Semester</td>
-            <td>Masstricht University</td>
-            <td>Masstricht, Netherlands</td>
+            <td>Maastricht University</td>
+            <td>Maastricht, Netherlands</td>
         </tr>
         <tr>
             <td>2023 - 2024</td>
             <td>👵🏻 Event Planning Specialist</td>
-            <td>Anke Media (Longterm Care Industry)</td>
+            <td>Anke Media</td>
             <td>Taipei, Taiwan</td>
         </tr>
         <tr>
             <td>2024 - 2025</td>
             <td>👩🏻‍💻 Frontend Developer</td>
-            <td>EzTravel (Online Travel Agency)</td>
+            <td>EzTravel</td>
             <td>Taipei, Taiwan</td>
         </tr>
         <tr>
@@ -46,7 +49,39 @@
             <td>Berlin, Germany</td>
         </tr>
     </table>
-    <iframe src="journey.html" width=100% height="300"></iframe>
+    <iframe src="journey.html" width=100% height="250"></iframe>
 </div>
+
+<!-- Modal -->
+<div id="galleryModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+        <img src="img/food2.jpg" alt="Gallery Image 1">
+        <img src="img/food5.jpg" alt="Gallery Image 2">
+        <img src="img/food3.jpg" alt="Gallery Image 3">
+        <img src="img/food1.JPG" alt="Gallery Image 4">
+        <img src="img/run.JPG" alt="Gallery Image 5">
+        <img src="img/swim.JPG" alt="Gallery Image 6">
+        <img src="img/run2.jpg" alt="Gallery Image 7">
+        <img src="img/masst.jpg" alt="Gallery Image 8">
+        <img src="img/toy1.JPG" alt="Gallery Image 9">
+        <img src="img/toy2.jpg" alt="Gallery Image 10">
+        <img src="img/toy3.jpg" alt="Gallery Image 11">
+        <img src="img/mass.JPG" alt="Gallery Image 12">
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById("galleryModal");
+    const btn = document.getElementById("galleryBtn");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = () => modal.style.display = "block";
+    span.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => {
+      if (event.target === modal) modal.style.display = "none";
+    };
+</script>
+
 </body>
 </html>
